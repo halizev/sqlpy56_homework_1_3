@@ -13,7 +13,6 @@ CREATE TABLE IF NOT EXISTS album (
 CREATE TABLE IF NOT EXISTS track (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
-    album_id INTEGER REFERENCES album(id),
     duration TIME NOT NULL
 );
 
@@ -46,7 +45,7 @@ CREATE TABLE IF NOT EXISTS genre_singer (
     singer_id INTEGER NOT NULL REFERENCES singer(id)
 );
 
--- Доп. Задание
+-- Г„Г®ГЇ. Г‡Г Г¤Г Г­ГЁГҐ
 CREATE TABLE IF NOT EXISTS department (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL
